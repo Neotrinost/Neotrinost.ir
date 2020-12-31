@@ -1,9 +1,93 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link href="static/css/style.css" type="text/css" rel="stylesheet">
-        <title>Neotrinost</title>
-    </head>
-    <body>
-        <h3>Welcome to Neotrinost !</h3>
-    </body>
+<head>
+    <title>Neotrinost - Home</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <style>
+        .mybtn {
+            background-color: #5F9EA0;
+        }
+
+        .postbox {
+            width: 100%;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .logout {
+            color: red;
+            text-decoration: none;
+        }
+
+        .logout:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h2>Welcome to <strong>Neotrinost</strong> !</h2>
+</div>
+<div class="content">
+    <div class="container box">
+        <div class="table-responsive">
+            <div align="center">
+                <button type="button" id="add_btn" data-toggle="modal" data-target="#contact"
+                        class="mybtn btn btn-primary">Contact us
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+</div>
+
+</body>
 </html>
+
+<div id="contact" class="modal fade">
+    <div class="modal-dialog">
+        <form method="post" id="user_form" action="index.php">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Contact us</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <i class="fa fa-linkedin-square"></i> <strong><a href="https://linkedin.com/company/neotrinost">LinkedIn</a></strong>
+                    </p>
+                    <p>
+                        <i class="fa fa-github"></i> <strong><a href="https://github.com/neotrinost">Github</a></strong>
+                    </p>
+                    <p>
+                        <i class="fa fa-twitter"></i> <strong><a href="#">Twitter</a></strong>
+                    </p>
+                    <p>
+                        <i class="fa fa-facebook"></i> <strong><a href="#">Facebook</a></strong>
+                    </p>
+                    <p>
+                        <i class="fa fa-telegram"></i> <strong><a href="https://t.me/neotrinost">Telegram</a></strong>
+                    </p>
+                    <p>
+                        <i class="fa fa-instagram"></i> <strong><a href="#">Instagram</a></strong>
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope"></i> <strong><a href="#">E-mail</a></strong>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
