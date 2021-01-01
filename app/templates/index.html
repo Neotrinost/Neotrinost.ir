@@ -11,18 +11,21 @@
             margin: 0px;
             padding: 0px;
         }
+        .neotrinost {
+            color: #FF8C00;
+        }
         body {
             font-size: 120%;
-            background: #F8F8FF;
+            background: #f8f8f8;
         }
 
         .header {
             width: 30%;
             margin: 50px auto 0px;
             color: white;
-            background: #5F9EA0;
+            background: #FF8C00;
             text-align: center;
-            border: 1px solid #B0C4DE;
+            border: 1px solid #FF8C00;
             border-bottom: none;
             border-radius: 10px 10px 0px 0px;
             padding: 20px;
@@ -31,14 +34,13 @@
             width: 30%;
             margin: 0px auto;
             padding: 20px;
-            border: 1px solid #B0C4DE;
+            border: 1px solid #FF8C00;
             background: white;
             border-radius: 0px 0px 10px 10px;
         }
         .input-group {
             margin: 10px 0px 10px 0px;
         }
-
         .input-group label {
             display: block;
             text-align: left;
@@ -52,71 +54,34 @@
             border-radius: 5px;
             border: 1px solid gray;
         }
-        .btn {
-            padding: 10px;
-            font-size: 15px;
-            color: white;
-            background: #5F9EA0;
-            border: none;
-            border-radius: 5px;
-        }
-        .error {
-            width: 92%;
-            margin: 0px auto;
-            padding: 10px;
-            border: 1px solid #a94442;
-            color: #a94442;
-            background: #f2dede;
-            border-radius: 5px;
-            text-align: left;
-        }
-        .success {
-            color: #3c763d;
-            background: #dff0d8;
-            border: 1px solid #3c763d;
-            margin-bottom: 20px;
-        }
-
         .box {
             width: 80%;
             padding: 25px;
             background-color: #fff;
-            border: 1px solid #ccc;
+            border: 1px solid #FF8C00;
             border-radius: 5px;
             margin-top: 30px;
         }
-
+        .line {
+            border-bottom: solid #FF8C00 thin;
+        }
         a {
             color: black;
         }
-
         .mybtn {
-            background-color: #5F9EA0;
+            padding: 10px;
+            font-size: 15px;
+            color: white;
+            background: #FF8C00;
+            border: none;
+            border-radius: 5px;
         }
-
         .boxx {
             text-align: center;
         }
-
-        .postbox {
-            width: 100%;
-            padding: 15px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            text-align: center;
+        .ic {
+            font-size: 25px;
         }
-
-        .logout {
-            color: red;
-            text-decoration: none;
-        }
-
-        .logout:hover {
-            color: red;
-        }
-
-
     </style>
 </head>
 <body>
@@ -128,7 +93,7 @@
         <div class="table-responsive">
             <div align="center">
                 <button type="button" id="add_btn" data-toggle="modal" data-target="#contact"
-                        class="mybtn btn btn-primary">What is Neotrinost
+                        class="mybtn">What is <strong>Neotrinost</strong>
                 </button>
             </div>
         </div>
@@ -148,24 +113,26 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">What is Neotrinost ?</h4>
+                    <h4 class="modal-title">What is <span class="neotrinost">Neotrinost</span> ?</h4>
                 </div>
                 <div class="modal-body boxx">
-                    <p>Hey There ! We are <strong>Neotrinost</strong> !</p>
+                    <p>Hey There ! We are <strong><span class="neotrinost">Neotrinost</span></strong> !</p>
                     <br>
                     <p>We Develop FOSS and put the code on Github . We also release installation file in the site too .</p>
                     <p>We have a great team and lead by a powerful CEO !</p>
-                    <p>You know we can handle your projects to ! Tell us what you want and leave us to develop it !</p>
-                    <hr>
+                    <p>You know we can handle your projects tuo ! Tell us what you want and leave us to develop it !</p>
+                    <p>Now , <strong><span class="neotrinost">Neotrinost</span></strong> is workهng in a {Password-Saver} .</p>
+                    <p><a href="https://github.com/BlackIQ/Ashley">Ashley</a> is our first Desktop product that people can use in Command Line Interface .</p>
+                    <p class="line"></p>
                     <p>Follow Us</p>
-                    <a href="https://linkedin.com/company/neotrinost"><i class="fa fa-github text-default"></i></a>
-                    <a href="https://linkedin.com/company/neotrinost"><i class="fa fa-skype text-primary"></i></a>
-                    <a href="https://linkedin.com/company/neotrinost"><i class="fa fa-linkedin-square text-primary"></i></a>
-                    <a href="https://linkedin.com/company/neotrinost"><i class="fa fa-telegram text-primary"></i></a>
-                    <a href="https://linkedin.com/company/neotrinost"><i class="fa fa-envelope text-success"></i></a>
+                    <a class="ic" href="https://linkedin.com/company/neotrinost"><i class="fa fa-github text-default"></i></a>
+                    <a class="ic" href="https://join.skype.com/invite/ogxDQIZ5B0ID"><i class="fa fa-skype text-primary"></i></a>
+                    <a class="ic" href="https://linkedin.com/company/neotrinost"><i class="fa fa-linkedin-square text-primary"></i></a>
+                    <a class="ic" href="https://t.me/Neotrinost"><i class="fa fa-telegram text-primary"></i></a>
+                    <a class="ic" href="https://neotrinost@yahoo.com"><i class="fa fa-envelope text-success"></i></a>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+                    <button type="button" data-dismiss="modal" class="mybtn">Close</button>
                 </div>
             </div>
         </form>
