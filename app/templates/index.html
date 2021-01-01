@@ -1,9 +1,173 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link href="static/css/style.css" type="text/css" rel="stylesheet">
-        <title>Neotrinost</title>
-    </head>
-    <body>
-        <h3>Welcome to Neotrinost !</h3>
-    </body>
+<head>
+    <title>Neotrinost - Home</title>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            font-size: 120%;
+            background: #F8F8FF;
+        }
+
+        .header {
+            width: 30%;
+            margin: 50px auto 0px;
+            color: white;
+            background: #5F9EA0;
+            text-align: center;
+            border: 1px solid #B0C4DE;
+            border-bottom: none;
+            border-radius: 10px 10px 0px 0px;
+            padding: 20px;
+        }
+        .form, .content {
+            width: 30%;
+            margin: 0px auto;
+            padding: 20px;
+            border: 1px solid #B0C4DE;
+            background: white;
+            border-radius: 0px 0px 10px 10px;
+        }
+        .input-group {
+            margin: 10px 0px 10px 0px;
+        }
+
+        .input-group label {
+            display: block;
+            text-align: left;
+            margin: 3px;
+        }
+        .input-group input {
+            height: 30px;
+            width: 93%;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        .btn {
+            padding: 10px;
+            font-size: 15px;
+            color: white;
+            background: #5F9EA0;
+            border: none;
+            border-radius: 5px;
+        }
+        .error {
+            width: 92%;
+            margin: 0px auto;
+            padding: 10px;
+            border: 1px solid #a94442;
+            color: #a94442;
+            background: #f2dede;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .success {
+            color: #3c763d;
+            background: #dff0d8;
+            border: 1px solid #3c763d;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            width: 80%;
+            padding: 25px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        a {
+            color: black;
+        }
+
+        .mybtn {
+            background-color: #5F9EA0;
+        }
+
+        .boxx {
+            text-align: center;
+        }
+
+        .postbox {
+            width: 100%;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .logout {
+            color: red;
+            text-decoration: none;
+        }
+
+        .logout:hover {
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <h2>Welcome to <strong>Neotrinost</strong> !</h2>
+</div>
+<div class="content">
+    <div class="container box">
+        <div class="table-responsive">
+            <div align="center">
+                <button type="button" id="add_btn" data-toggle="modal" data-target="#contact"
+                        class="mybtn btn btn-primary">What is Neotrinost
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+</div>
+
+</body>
 </html>
+
+<div id="contact" class="modal fade">
+    <div class="modal-dialog">
+        <form method="post" id="user_form" action="index.php">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">What is Neotrinost ?</h4>
+                </div>
+                <div class="modal-body boxx">
+                    <p>Hey There ! We are <strong>Neotrinost</strong> !</p>
+                    <br>
+                    <p>We Develop FOSS and put the code on Github . We also release installation file in the site too .</p>
+                    <p>We have a great team and lead by a powerful CEO !</p>
+                    <p>You know we can handle your projects to ! Tell us what you want and leave us to develop it !</p>
+                    <hr>
+                    <p>Follow Us</p>
+                    <a href="https://linkedin.com/company/neotrinost"><i class="fa fa-github text-default"></i></a>
+                    <a href="https://linkedin.com/company/neotrinost"><i class="fa fa-skype text-primary"></i></a>
+                    <a href="https://linkedin.com/company/neotrinost"><i class="fa fa-linkedin-square text-primary"></i></a>
+                    <a href="https://linkedin.com/company/neotrinost"><i class="fa fa-telegram text-primary"></i></a>
+                    <a href="https://linkedin.com/company/neotrinost"><i class="fa fa-envelope text-success"></i></a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
