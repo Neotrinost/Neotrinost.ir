@@ -6,5 +6,7 @@
 		<br>
 		<p>Wait for days .</p>
 		<p><b>TNX</b></p>
+		<hr>
+		<p><a href="https://neotrinost.ir"><b>By the way , this is the site !</b></a></p>
 	</body>
 </html>
