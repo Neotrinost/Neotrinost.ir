@@ -7,14 +7,12 @@
 		<p>Wait for days .</p>
 		<p><b>TNX</b></p>
 		<hr>
-		
-		```
-		fandogh login
-		fandogh imaga publish
-		fandogh service deploy
-		```
-		
-		<hr>
 		<p><a href="https://neotrinost.ir"><b>By the way , this is the site !</b></a></p>
 	</body>
 </html>
+
+```
+fandogh login
+fandogh imaga publish
+fandogh service deploy
+```
