@@ -21,7 +21,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
 	<style>
 		body {
 			padding-top: 56px;
@@ -31,7 +31,7 @@
 
 <body>
 
-<nav class="navbar bg-dark navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar bg-warning navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="."><span>Narbon </span>Project</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,10 +39,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fa fa-home"></i> Home
-                        <span class="sr-only">(current)</span>
-                    </a>
+                <li class="nav-item text-white active">
+                    <a class="nav-link" href="#"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item text-white active">
+                    <a class="nav-link" href="#"><i class="fa fa-id-card"></i> About Us</a>
+                </li>
+                <li class="nav-item text-white active">
+                    <a class="nav-link" href="#"><i class="fa fa-envelope"></i> Contact Us</a>
                 </li>
             </li>
         </ul>
@@ -51,20 +55,34 @@
   </nav>
   
   <div class="container">
-
+      <br>
     <div class="row">
     
-    <h1 class="my-4">Welcome To Neotrinost !</h1>
+    <!-- <h1 class="my-4">Welcome To Neotrinost !</h1> -->
     
       <div class="col-md-8">
-        <div class="card mb-4">
+        <div class="border border-warning card mb-4">
             <div class="card-body">
-                <h2 class="card-title">Title</h2>
-                <hr>
-                <p class="card-text">Text</p>
+                <h2 class="card-title">We are here !</h2>
+                <hr class="border-warning">
+                <p class="card-text">
+                    <b>CEO | Founder</b>
+                    <br>
+                    Amirhossein Mohammadi
+                    <br>
+                    <br>
+                    <b>CTO | Co-Founder</b>
+                    <br>
+                    Annahita Mirhosseini
+                    <br>
+                    <br>
+                    <b>Django & Flask</b>
+                    <br>
+                    Shahriar
+                </p>
             </div>
-            <div class="card-footer text-muted">
-                Posted on Mar, 26, 2021 By Amir
+            <div class="card-footer border-warning text-muted">
+                Posted on Mar, 28, 2021 By Amir
             </div>
         </div>
        </div>
@@ -74,27 +92,55 @@
   </div>
   
     <!-- Footer -->
-  <footer class="py-5 bg-dark">
+  <footer class="py-5 bg-warning">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
+                <br>
 	            <div class="m-0 text-left text-white">
-	                <p class="text-white"><b><a href="https://www.linkedin.com/company/neotrinost">Neotrinost</a></b></p>
-	                <p class="text-white">Neotrinost is a development company <b>( Team )</b></p>
-	                <p>
-	                    <i class="fa fa-linkedin text-info"></i>
-	                    <i class="fa fa-github text-muted"></i>
-	                    <i class="fa fa-telegram text-primary"></i>
-	                    <i class="fa fa-instagram text-danger"></i>
-	                    <i class="fa fa-twitter text-primary"></i>
-	                </p>
+	                <p class="text-white"><b><a class="text-white" href="https://www.linkedin.com/company/neotrinost">Neotrinost</a></b></p>
+	                <p class="text-white">Neotrinost is a development company</p>
+	                <h5>
+	                    <i class="fa fa-linkedin text-white"></i>
+	                    <i class="fa fa-github text-white"></i>
+	                    <i class="fa fa-telegram text-white"></i>
+	                    <i class="fa fa-instagram text-white"></i>
+	                    <i class="fa fa-twitter text-white"></i>
+                    </h5>
+	            </div>
+	        </div>
+            <div class="col-md-4">
+                <br>
+	            <div class="m-0 text-left text-white">
+	                <p class="text-white"><b><a class="text-white" href="https://www.linkedin.com/company/neotrinost">What we develop ?</a></b></p>
+	                <p class="text-white">Neotrinost works in all platforms</p>
+	                <h5>
+	                    <i class="fa fa-desktop text-white"></i>
+	                    <i class="fa fa-laptop text-white"></i>
+	                    <i class="fa fa-mobile text-white"></i>
+	                    <i class="fa fa-globe text-white"></i>
+	                    <i class="fa fa-server text-white"></i>
+                    </h5>
+	            </div>
+	        </div>
+            <div class="col-md-4">
+                <br>
+	            <div class="m-0 text-left text-white">
+	                <p class="text-white"><b><a class="text-white" href="https://www.linkedin.com/company/neotrinost">What we know ?</a></b></p>
+	                <p class="text-white">We know the bests !</p>
+	                <h5>
+	                    <i class="fab fa-python text-white"></i>
+	                    <i class="fab fa-php text-white"></i>
+	                    <i class="fab fa-git text-white"></i>
+	                    <i class="fa fa-database text-white"></i>
+                    </h5>
 	            </div>
 	        </div>
         </div>
     </div>
     <!-- /.container -->
   </footer>
-  
-
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
