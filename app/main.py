@@ -1,3 +1,4 @@
+#for developement server on: $env:FLASK_ENV = "development"
 from flask import render_template, Flask
 
 app = Flask(__name__)
