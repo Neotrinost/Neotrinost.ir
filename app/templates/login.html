@@ -1,139 +1,138 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta name="description" content="Neotrinost | Open-Sourve development team">
-	<meta name="keywords" content="neotrinost,open source,python,php,java,android,linux,manjaro,amirhossein mohammadi,linkedin,twitter,gnu_amir">
-	<meta name="author" content="Neotrinost">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta property="og:site_name" content="">
-	<meta property="og:title" content="Neotrinost | Open-Sourve development team">
-	<meta property="og:type" content="programming">
-	<link rel="shortcut icon" type="image/jpg" href="static/img/favicon.png"/>
-	<meta property="og:image" content="static/img/favicon.png">
-	<meta property="og:description" content="Neotrinost | FOSS development team . We make FOSS for you , to have better , easier and happier life !">
-	<title>Neotrinost - Login</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-	<style>
-		body {
-			padding-top: 56px;
-		}
-	</style>
-</head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<meta name="description" content="Neotrinost | Open-Sourve development team">
+		<meta name="keywords" content="neotrinost,open source,python,php,java,android,linux,manjaro,amirhossein mohammadi,linkedin,twitter,gnu_amir">
+		<meta name="author" content="Neotrinost">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta property="og:site_name" content="">
+		<meta property="og:title" content="Neotrinost | Open-Sourve development team">
+		<meta property="og:type" content="programming">
+		<link rel="shortcut icon" type="image/jpg" href="static/img/favicon.png"/>
+		<meta property="og:image" content="static/img/favicon.png">
+		<meta property="og:description" content="Neotrinost | FOSS development team . We make FOSS for you , to have better , easier and happier life !">
+		<title>Neotrinost - Login</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
+		<style>
+			body {
+				padding-top: 56px;
+			}
+		</style>
+	</head>
 
-<body>
+	<body>
+		<nav class="navbar bg-warning navbar-expand-lg navbar-dark fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="."><span>Neotrinost </span>Project</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item text-white active">
+							<a class="nav-link" href="#"><i class="fa fa-home"></i> Home</a>
+						</li>
+						<li class="nav-item text-white active">
+							<a class="nav-link" href="#"><i class="fa fa-id-card"></i> About Us</a>
+						</li>
+						<li class="nav-item text-white active">
+							<a class="nav-link" href="#"><i class="fa fa-envelope"></i> Contact Us</a>
+						</li>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</nav>
 
-<nav class="navbar bg-warning navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="."><span>Neotrinost </span>Project</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item text-white active">
-                    <a class="nav-link" href="#"><i class="fa fa-home"></i> Home</a>
-                </li>
-                <li class="nav-item text-white active">
-                    <a class="nav-link" href="#"><i class="fa fa-id-card"></i> About Us</a>
-                </li>
-                <li class="nav-item text-white active">
-                    <a class="nav-link" href="#"><i class="fa fa-envelope"></i> Contact Us</a>
-                </li>
-            </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <h1 class="my-4">Login To Your Account</h1>
-            <div class="col-md-6">
-                <form action="login" method="post">
-                    <div class="form-group">
-                        <label for="code">Username</label>
-                        <input type="text" name="code" id="code" class="form-control" placeholder="Username">
+		<div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="my-4">Login To Your Account</h1>
+                    <div class="col-md-6">
+                        <form action="login" method="post">
+                            <div class="form-group">
+                                <label for="code">Username</label>
+                                <input type="text" name="code" id="code" class="form-control" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="remember" type="checkbox" id="remember">
+                                <label class="form-check-label" for="remember">
+                                    Remember Me
+                                </label>
+                            </div>
+                            <br>
+                            <button name="login" id="login" class="btn btn-warning text-white" type="submit">Login</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Password">
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" name="remember" type="checkbox" id="remember">
-                        <label class="form-check-label" for="remember">
-                            Remember Me
-                        </label>
-                    </div>
-                    <br>
-                    <button name="login" id="login" class="btn btn-warning text-white" type="submit">Login</button>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<br>
+		<br>
 
-    <!-- Footer -->
-  <footer class="py-5 bg-warning">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <br>
-	            <div class="m-0 text-left text-white">
-	                <p class="text-white"><b><a class="text-white" href="https://www.linkedin.com/company/neotrinost">Neotrinost</a></b></p>
-	                <p class="text-white">Neotrinost is a development company</p>
-	                <h5>
-	                    <i class="fa fa-linkedin text-white"></i>
-	                    <i class="fa fa-github text-white"></i>
-	                    <i class="fa fa-telegram text-white"></i>
-	                    <i class="fa fa-instagram text-white"></i>
-	                    <i class="fa fa-twitter text-white"></i>
-                    </h5>
-	            </div>
-	        </div>
-            <div class="col-md-4">
-                <br>
-	            <div class="m-0 text-left text-white">
-	                <p class="text-white"><b><a class="text-white" href="https://www.linkedin.com/company/neotrinost">What we develop ?</a></b></p>
-	                <p class="text-white">Neotrinost works in all platforms</p>
-	                <h5>
-	                    <i class="fa fa-desktop text-white"></i>
-	                    <i class="fa fa-laptop text-white"></i>
-	                    <i class="fa fa-mobile text-white"></i>
-	                    <i class="fa fa-globe text-white"></i>
-	                    <i class="fa fa-server text-white"></i>
-                    </h5>
-	            </div>
-	        </div>
-            <div class="col-md-4">
-                <br>
-	            <div class="m-0 text-left text-white">
-	                <p class="text-white"><b><a class="text-white" href="https://www.linkedin.com/company/neotrinost">What we know ?</a></b></p>
-	                <p class="text-white">We know the bests !</p>
-	                <h5>
-	                    <i class="fab fa-python text-white"></i>
-	                    <i class="fab fa-php text-white"></i>
-	                    <i class="fab fa-git text-white"></i>
-	                    <i class="fa fa-database text-white"></i>
-                    </h5>
-	            </div>
-	        </div>
-        </div>
-    </div>
-    <!-- /.container -->
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-</body>
+		<footer class="py-5 bg-warning">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<br>
+						<div class="m-0 text-left text-white">
+							<p class="text-white"><b><a class="text-white" href="https://www.linkedin.com/company/neotrinost">Neotrinost</a></b></p>
+							<p class="text-white">Neotrinost is a development company</p>
+							<h5>
+								<i class="fa fa-linkedin text-white"></i>
+								<i class="fa fa-github text-white"></i>
+								<i class="fa fa-telegram text-white"></i>
+								<i class="fa fa-instagram text-white"></i>
+								<i class="fa fa-twitter text-white"></i>
+							</h5>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<br>
+						<div class="m-0 text-left text-white">
+							<p class="text-white"><b><a class="text-white" href="https://www.linkedin.com/company/neotrinost">What we develop ?</a></b></p>
+							<p class="text-white">Neotrinost works in all platforms</p>
+							<h5>
+								<i class="fa fa-desktop text-white"></i>
+								<i class="fa fa-laptop text-white"></i>
+								<i class="fa fa-mobile text-white"></i>
+								<i class="fa fa-globe text-white"></i>
+								<i class="fa fa-server text-white"></i>
+							</h5>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<br>
+						<div class="m-0 text-left text-white">
+							<p class="text-white"><b><a class="text-white" href="https://www.linkedin.com/company/neotrinost">What we know ?</a></b></p>
+							<p class="text-white">We know the bests !</p>
+							<h5>
+								<i class="fab fa-python text-white"></i>
+								<i class="fab fa-php text-white"></i>
+								<i class="fab fa-git text-white"></i>
+								<i class="fa fa-database text-white"></i>
+							</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	</body>
 </html>
