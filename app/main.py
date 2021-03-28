@@ -1,6 +1,10 @@
 #for developement server on: $env:FLASK_ENV = "development"
 from flask import render_template, Flask, request
 
+amir = {'Username' : 'amir', 'Password' : '1234'}
+anna = {'Username' : 'anna', 'Password' : '1234'}
+shahriar = {'Username' : 'shahriar', 'Password' : '1234'}
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -11,14 +15,10 @@ def index():
 def login():
     return render_template("login.html")
 
-@app.route("/login/", methods = ['POST'])
+@app.route("/account/login", methods = ['POST'])
 def check():
-    amir = {'Username' : 'amir', 'Password' : '1234'}
-    anna_mirhosseiny = {'Username' : 'mirhosseiny', 'Password' : '1234'}
-    shahriar = {'Username' : 'shahriaarrr', 'Password' : '1234'}
-
-    Username = request.form['Username']
-    Password = request.form['Password']
+    Username = request.form['code']
+    Password = request.form['password']
 
     if Username.lower() == shahriar['Username'] and Password == shahriar['Password']:
         return render_template("test.html", Username = Username)
@@ -26,7 +26,7 @@ def check():
     elif Username.lower() == amir['Username'] and Password == amir['Password']:
         return render_template("test.html", Username = Username)
         
-    elif Username.lower() == anna_mirhosseiny['Username'] and Password == anna_mirhosseiny['Password']:
+    elif Username.lower() == anna['Username'] and Password == anna_mirhosseiny['Password']:
         return render_template("test.html", Username = Username)
 
     return "wrong username or password"
