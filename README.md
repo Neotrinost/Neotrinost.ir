@@ -1,7 +1,9 @@
 <html>
 	<body>
 		<h1>Neotrinost Site in Flask</h1>
-		<ht>
+		<hr>
+		<h2>Last Version : v10</h2>
+		<hr>
 		<p>We <b>are not</b> going to push anything in github <b>until a time</b></p>
 		<br>
 		<p>Wait for days .</p>
