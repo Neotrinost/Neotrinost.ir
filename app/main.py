@@ -26,7 +26,7 @@ def check():
     elif Username.lower() == amir['Username'] and Password == amir['Password']:
         return render_template("test.html", Username = Username)
         
-    elif Username.lower() == anna['Username'] and Password == anna_mirhosseiny['Password']:
+    elif Username.lower() == anna['Username'] and Password == anna['Password']:
         return render_template("test.html", Username = Username)
 
     return "wrong username or password"
