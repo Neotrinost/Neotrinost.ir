@@ -1,7 +1,28 @@
-# Neotrinost Flask Site
+# Neotrinost.ir
 
 - Front-End : Amirhossein Mohammadi
-- Back-End : Sahriar Ghasempour
+- Back-End : Shahriar Ghasempour
+
+---
+
+**Create User**
+
+```mysql
+CREATE USER 'neotrinost'@'localhost' IDENTIFIED BY 'neotrinost';
+GRANT ALL PRIVILEGES ON *.* TO 'neotrinost'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+**Create Database and Table**
+
+```mysql
+CREATE DATABASE neotrinost;
+USE neotrinost;
+CREATE TABLE admin (usrname TEXT, passwd TEXT);
+INSERT INTO admin VALUES ('usernamesample', 'passwordsample');
+```
+
+**Fandogh Commands**
 
 ```
 fandogh login

@@ -1,41 +1,74 @@
 #for developement server on: $env:FLASK_ENV = "development"
-from flask import render_template, Flask, request
+#for save all databace edit's please write db.commit() after edit databace
 
-amir = {'Username' : 'amir', 'Password' : '1234'}
-anna = {'Username' : 'anna', 'Password' : '1234'}
-shahriar = {'Username' : 'shahriar', 'Password' : '1234'}
+from flask import Flask, render_template, request, g
+
+from lib.forms import LoginForm
+from lib.database import username, password
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = '1234'
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("home.html")
 
-@app.route("/account/login")
+@app.route("/blog")
+def blog():
+    return render_template("blog.html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
+#admin routes
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+@app.route("/login")
 def login():
-    return render_template("login.html")
+    login_form = LoginForm()
+    return render_template('login.html', login_form = login_form)
 
-@app.route("/account/login", methods = ['POST'])
-def check():
-    Username = request.form['code']
-    Password = request.form['password']
+@app.route("/submit/", methods = ['POST'])
+def submit():
+    login_form = LoginForm(request.form)
+    if login_form.validate_on_submit():
+        form_username = login_form.username.data
+        form_password = login_form.password.data
 
-    if Username.lower() == shahriar['Username'] and Password == shahriar['Password']:
-        return render_template("test.html", Username = Username)
-
-    elif Username.lower() == amir['Username'] and Password == amir['Password']:
-        return render_template("test.html", Username = Username)
+        if form_username == username and form_password == password:
+            return render_template("panel.html", username = username)
+        else:
+            return render_template("Error/user.html", error = "Username or Password is incorrect")
         
-    elif Username.lower() == anna['Username'] and Password == anna_mirhosseiny['Password']:
-        return render_template("test.html", Username = Username)
+    # return "OK"
 
-    return "wrong username or password"
 
-# @app.route("/account/logout")
-
+#Errors
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('404.html')
+    return render_template('Error/404.html')
+
+@app.errorhandler(400)
+def forbiden(error):
+    return render_template('Error/400.html')
+
+@app.errorhandler(500)
+def server(error):
+    return render_template('Error/500.html')
+
+@app.errorhandler(502)
+def other_server(error):
+    return render_template("Error/502.html")
+
+@app.errorhandler(503)
+def crash_server(error):
+    return render_template("Error/503.html")
+
+
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", 5000)
+    app.run()
