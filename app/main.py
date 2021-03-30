@@ -21,19 +21,16 @@ def blog():
 def about():
     return render_template("about.html")
 
-
-<<<<<<< HEAD
 #admin routes
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
-=======
-    elif Username.lower() == amir['Username'] and Password == amir['Password']:
+
+    if Username.lower() == amir['Username'] and Password == amir['Password']:
         return render_template("test.html", Username = Username)
         
     elif Username.lower() == anna['Username'] and Password == anna['Password']:
         return render_template("test.html", Username = Username)
->>>>>>> ec81fd8ce114c19577b7299627b2e41f8e571646
 
 @app.route("/login")
 def login():
@@ -79,4 +76,4 @@ def crash_server(error):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run("0.0.0.0", 5000)
