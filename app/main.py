@@ -2,7 +2,7 @@
 
 from flask import Flask, render_template, request
 
-from lib.forms import LoginForm, ContactUs
+from lib.forms import LoginForm, ContactUs, NewPost
 from lib.database import username, password
 
 app = Flask(__name__)
@@ -20,22 +20,24 @@ def blog():
 def about():
     return render_template("about.html")
 
+@app.route("/panel")
+def panel():
+    newpost_form = NewPost()
+    return render_template("panel.html", new_form = newpost_form)
+
+@app.route("/newpost/", methods = ['POST'])
+def newpost():
+    new_form = NewPost(request.form)
+    if new_form.validate_on_submit():
+        form_title = new_form.title.data
+        form_text = new_form.text.data
+
+        return form_title
+
 @app.route("/login")
 def login():
     login_form = LoginForm()
     return render_template('login.html', login_form = login_form)
-
-@app.route("/submit/", methods = ['POST'])
-def submit():
-    login_form = LoginForm(request.form)
-    if login_form.validate_on_submit():
-        form_username = login_form.username.data
-        form_password = login_form.password.data
-
-        if form_username == username and form_password == password:
-            return render_template("panel.html", username = username)
-        else:
-            return render_template("Error/error.html", context = ['User Error', 'Sorry, Username or Password is incorrect'])
 
 @app.route("/contact")
 def contact():
