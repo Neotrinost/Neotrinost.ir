@@ -1,6 +1,6 @@
 #for developement server on: $env:FLASK_ENV = "development"
 
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect
 
 from lib.forms import LoginForm, ContactUs, NewPost
 from lib.database import username, password
@@ -22,8 +22,12 @@ def about():
 
 @app.route("/panel")
 def panel():
-    newpost_form = NewPost()
-    return render_template("panel.html", new_form = newpost_form)
+    if session['status'] == True:
+        newpost_form = NewPost()
+        return render_template("panel.html", new_form = newpost_form)
+    else:
+        return redirect("https://neotrinost.ir")
+
 
 @app.route("/newpost/", methods = ['POST'])
 def newpost():
@@ -34,10 +38,24 @@ def newpost():
 
 @app.route("/login", methods = ['GET', 'POST'])
 def login():
-    if request.method == 'POST':
-      session['username'] = request.form['username']
-      return redirect(url_for('index'))
-    return render_template('login.html', login_form = login_form)
+    if session['status'] != True:
+        login_form = LoginForm()
+        return render_template('login.html', login_form = login_form)
+    else:
+        return redirect("https://neotrinost.ir")
+
+@app.route("/submit/", methods = ['POST'])
+def submit():
+    login_form = LoginForm(request.form)
+    if login_form.validate_on_submit():
+        form_username = login_form.username.data
+        form_password = login_form.password.data
+        if form_username == username and form_password == password:
+            session['status'] = True
+            session['username'] = form_username
+            return redirect("https://neotrinost.ir/panel")
+        else:
+            return render_template("Error/error.html", context = ['User Error', 'Sorry, Username or Password is incorrect'])
 
 @app.route("/logout")
 def logout():
