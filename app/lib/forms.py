@@ -6,3 +6,6 @@ from wtforms.validators import DataRequired
 class LoginForm(FlaskForm):
     username = TextField(validators = [DataRequired()])
     password = PasswordField(validators = [DataRequired()])
+
+class ContactUs(FlaskForm):
+    email = TextField(validators = [DataRequired()])
