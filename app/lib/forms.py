@@ -9,3 +9,7 @@ class LoginForm(FlaskForm):
 
 class ContactUs(FlaskForm):
     email = TextField(validators = [DataRequired()])
+
+class NewPost(FlaskForm):
+    title = TextField(validators = [DataRequired()])
+    text = TextField(validators = [DataRequired()])
