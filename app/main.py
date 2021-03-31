@@ -1,7 +1,6 @@
 #for developement server on: $env:FLASK_ENV = "development"
-#for save all databace edit's please write db.commit() after edit databace
 
-from flask import Flask, render_template, request, g
+from flask import Flask, render_template, request
 
 from lib.forms import LoginForm, ContactUs
 from lib.database import username, password
@@ -23,7 +22,7 @@ def about():
 
 @app.route("/login")
 def login():
-    contact = LoginForm()
+    login_form = LoginForm()
     return render_template('login.html', login_form = login_form)
 
 @app.route("/submit/", methods = ['POST'])
