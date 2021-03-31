@@ -54,27 +54,27 @@ def subscribe():
 #Errors
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template("Error/error.html", context = ['404 Page not found', 'Sorry, This page is not found'])
+    return render_template("Error/error.html", context = ['404', 404 Page not found', 'Sorry, This page is not found'])
 
 @app.errorhandler(405)
 def method_not_allowed(error):
-    return render_template("Error/error.html", context = ['405 Method Not Allowed', 'The method is not allowed for the requested URL'])
+    return render_template("Error/error.html", context = ['405', '405 Method Not Allowed', 'The method is not allowed for the requested URL'])
 
 @app.errorhandler(400)
 def forbiden(error):
-    return render_template("Error/error.html", context = ['400 Bad Request', 'Sorry, an error has occured, There is a bad requeste'])
+    return render_template("Error/error.html", context = ['400', '400 Bad Request', 'Sorry, an error has occured, There is a bad requeste'])
 
 @app.errorhandler(500)
 def server(error):
-    return render_template("Error/error.html", context = ['500 Internal Server Error', 'The server encountered an internal error and was unable to complete your request . Either the server is overloaded or there is an error in the application'])
+    return render_template("Error/error.html", context = ['500', '500 Internal Server Error', 'The server encountered an internal error and was unable to complete your request . Either the server is overloaded or there is an error in the application'])
 
 @app.errorhandler(502)
 def other_server(error):
-    return render_template("Error/error.html", context = ['502 Gateway Error', 'Sorry, Bad gateway'])
+    return render_template("Error/error.html", context = ['502', '502 Gateway Error', 'Sorry, Bad gateway'])
 
 @app.errorhandler(503)
 def crash_server(error):
-    return render_template("Error/error.html", context = ['503 Service Error', 'Sorry, service is Unavailable'])
+    return render_template("Error/error.html", context = ['503', '503 Service Error', 'Sorry, service is Unavailable'])
 
 
 
