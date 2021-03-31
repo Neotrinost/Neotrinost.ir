@@ -4,13 +4,14 @@ from flask import Flask, render_template, request
 
 from lib.forms import LoginForm, ContactUs
 from lib.database import username, password
+from lib.elements import navigation_bar
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '1234'
 
 @app.route("/")
 def index():
-    return render_template("home.html")
+    return render_template("home.html", context = [navigation_bar])
 
 @app.route("/blog")
 def blog():
