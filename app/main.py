@@ -3,7 +3,7 @@
 
 from flask import Flask, render_template, request, g
 
-from lib.forms import LoginForm
+from lib.forms import LoginForm, ContactUs
 from lib.database import username, password
 
 app = Flask(__name__)
@@ -21,20 +21,9 @@ def blog():
 def about():
     return render_template("about.html")
 
-#admin routes
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
-
-    if Username.lower() == amir['Username'] and Password == amir['Password']:
-        return render_template("test.html", Username = Username)
-        
-    elif Username.lower() == anna['Username'] and Password == anna['Password']:
-        return render_template("test.html", Username = Username)
-
 @app.route("/login")
 def login():
-    login_form = LoginForm()
+    contact = LoginForm()
     return render_template('login.html', login_form = login_form)
 
 @app.route("/submit/", methods = ['POST'])
@@ -48,8 +37,19 @@ def submit():
             return render_template("panel.html", username = username)
         else:
             return render_template("Error/user.html", error = "Username or Password is incorrect")
-        
-    # return "OK"
+
+@app.route("/contact")
+def contact():
+    contact_form = ContactUs()
+    return render_template("contact.html", con = contact_form)
+
+@app.route("/subscribe/", methods = ['POST'])
+def subscribe():
+    contact_form = ContactUs(request.form)
+    if contact_form.validate_on_submit():
+        form_username = contact_form.email.data
+
+        return form_username
 
 
 #Errors
