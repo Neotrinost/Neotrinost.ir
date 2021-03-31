@@ -35,7 +35,7 @@ def submit():
         if form_username == username and form_password == password:
             return render_template("panel.html", username = username)
         else:
-            return render_template("Error/user.html", error = "Username or Password is incorrect")
+            return render_template("Error/error.html", context = ['User Error', 'Sorry, Username or Password is incorrect'])
 
 @app.route("/contact")
 def contact():
@@ -54,27 +54,27 @@ def subscribe():
 #Errors
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('Error/404.html')
+    return render_template("Error/error.html", context = ['404 Page not found', 'Sorry, This page is not found'])
 
 @app.errorhandler(405)
 def method_not_allowed(error):
-    return render_template('Error/405.html')
+    return render_template("Error/error.html", context = ['405 Method Not Allowed', 'The method is not allowed for the requested URL'])
 
 @app.errorhandler(400)
 def forbiden(error):
-    return render_template('Error/400.html')
+    return render_template("Error/error.html", context = ['400 Bad Request', 'Sorry, an error has occured, There is a bad requeste'])
 
 @app.errorhandler(500)
 def server(error):
-    return render_template('Error/500.html')
+    return render_template("Error/error.html", context = ['500 Internal Server Error', 'The server encountered an internal error and was unable to complete your request . Either the server is overloaded or there is an error in the application'])
 
 @app.errorhandler(502)
 def other_server(error):
-    return render_template("Error/502.html")
+    return render_template("Error/error.html", context = ['502 Gateway Error', 'Sorry, Bad gateway'])
 
 @app.errorhandler(503)
 def crash_server(error):
-    return render_template("Error/503.html")
+    return render_template("Error/error.html", context = ['503 Service Error', 'Sorry, service is Unavailable'])
 
 
 
