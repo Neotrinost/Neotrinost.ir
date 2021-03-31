@@ -8,18 +8,37 @@ from lib.database import username, password
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '1234'
 
+# Index
 @app.route("/")
 def index():
     return render_template("home.html")
 
+# Blog
 @app.route("/blog")
 def blog():
     return render_template("blog.html")
 
+# About
 @app.route("/about")
 def about():
     return render_template("about.html")
 
+# Contact
+@app.route("/contact")
+def contact():
+    contact_form = ContactUs()
+    return render_template("contact.html", con = contact_form)
+
+# Login
+@app.route("/login")
+def login():
+    if session['status'] == True:
+        return redirect("https://neotrinost.ir")
+    else:
+        login_form = LoginForm()
+        return render_template('login.html', login_form = login_form)
+
+# Panel
 @app.route("/panel")
 def panel():
     if session['status'] == True:
@@ -29,21 +48,7 @@ def panel():
         return redirect("https://neotrinost.ir")
 
 
-@app.route("/newpost/", methods = ['POST'])
-def newpost():
-    new_form = NewPost(request.form)
-    if new_form.validate_on_submit():
-        form_title = new_form.title.data
-        form_text = new_form.text.data
-
-@app.route("/login", methods = ['GET', 'POST'])
-def login():
-    if session['status'] != True:
-        login_form = LoginForm()
-        return render_template('login.html', login_form = login_form)
-    else:
-        return redirect("https://neotrinost.ir")
-
+# Login Back-End
 @app.route("/submit/", methods = ['POST'])
 def submit():
     login_form = LoginForm(request.form)
@@ -57,16 +62,13 @@ def submit():
         else:
             return render_template("Error/error.html", context = ['User Error', 'Sorry, Username or Password is incorrect'])
 
+# Logout Back-End
 @app.route("/logout")
 def logout():
-   session.pop('username', None)
-   return redirect(url_for('index'))
+   session.pop('status', None)
+   return redirect("https://neotrinost.ir")
 
-@app.route("/contact")
-def contact():
-    contact_form = ContactUs()
-    return render_template("contact.html", con = contact_form)
-
+# Subscribe Back-End
 @app.route("/subscribe/", methods = ['POST'])
 def subscribe():
     contact_form = ContactUs(request.form)
@@ -75,6 +77,13 @@ def subscribe():
 
         return form_username
 
+# New Post Back-End
+@app.route("/newpost/", methods = ['POST'])
+def newpost():
+    new_form = NewPost(request.form)
+    if new_form.validate_on_submit():
+        form_title = new_form.title.data
+        form_text = new_form.text.data
 
 #Errors
 @app.errorhandler(404)
@@ -100,8 +109,6 @@ def other_server(error):
 @app.errorhandler(503)
 def crash_server(error):
     return render_template("Error/error.html", context = ['503', '503 Service Error', 'Sorry, service is Unavailable'])
-
-
 
 if __name__ == "__main__":
     app.run()
