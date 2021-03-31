@@ -1,7 +1,6 @@
 # Neotrinost.ir
 
-- Front-End : Amirhossein Mohammadi
-- Back-End : Shahriar Ghasempour
+- programmer : Amirhossein Mohammadi
 
 ---
 
