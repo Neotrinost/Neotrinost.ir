@@ -32,8 +32,6 @@ def newpost():
         form_title = new_form.title.data
         form_text = new_form.text.data
 
-        return form_title
-
 @app.route("/login")
 def login():
     login_form = LoginForm()
