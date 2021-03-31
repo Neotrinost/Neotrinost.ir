@@ -54,7 +54,7 @@ def subscribe():
 #Errors
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template("Error/error.html", context = ['404', 404 Page not found', 'Sorry, This page is not found'])
+    return render_template("Error/error.html", context = ['404', '404 Page not found', 'Sorry, This page is not found'])
 
 @app.errorhandler(405)
 def method_not_allowed(error):
