@@ -1,6 +1,6 @@
 #for developement server on: $env:FLASK_ENV = "development"
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 
 from lib.forms import LoginForm, ContactUs, NewPost
 from lib.database import username, password
@@ -32,10 +32,17 @@ def newpost():
         form_title = new_form.title.data
         form_text = new_form.text.data
 
-@app.route("/login")
+@app.route("/login", methods = ['GET', 'POST'])
 def login():
-    login_form = LoginForm()
+    if request.method == 'POST':
+      session['username'] = request.form['username']
+      return redirect(url_for('index'))
     return render_template('login.html', login_form = login_form)
+
+@app.route("/logout")
+def logout():
+   session.pop('username', None)
+   return redirect(url_for('index'))
 
 @app.route("/contact")
 def contact():
