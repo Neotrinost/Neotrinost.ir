@@ -57,6 +57,10 @@ def subscribe():
 def page_not_found(error):
     return render_template('Error/404.html')
 
+@app.errorhandler(405)
+def method_not_allowed(error):
+    return render_template('Error/405.html')
+
 @app.errorhandler(400)
 def forbiden(error):
     return render_template('Error/400.html')
