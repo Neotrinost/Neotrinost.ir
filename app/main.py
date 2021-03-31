@@ -10,7 +10,7 @@ app.config['SECRET_KEY'] = '1234'
 
 @app.route("/")
 def index():
-    return render_template("home.html", context = [navigation_bar])
+    return render_template("home.html")
 
 @app.route("/blog")
 def blog():
