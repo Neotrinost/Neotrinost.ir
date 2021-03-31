@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>User - Error</title>
+        <title>{{ context[0] }} - Error</title>
         <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -27,10 +27,10 @@
                         <h1>
                             Oops !</h1>
                         <h2>
-                            {{ context[0] }}
+                            {{ context[1] }}
                         </h2>
                         <div class="text-muted">
-                            {{ context[1] }}
+                            {{ context[2] }}
                         </div>
                         <br>
                         <div class="form-check-inline">
