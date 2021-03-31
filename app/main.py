@@ -32,7 +32,7 @@ def contact():
 # Login
 @app.route("/login")
 def login():
-    if session['status'] == True:
+    if 'status' in session:
         return redirect("https://neotrinost.ir")
     else:
         login_form = LoginForm()
@@ -41,7 +41,7 @@ def login():
 # Panel
 @app.route("/panel")
 def panel():
-    if session['status'] == True:
+    if 'status' in session:
         newpost_form = NewPost()
         return render_template("panel.html", new_form = newpost_form)
     else:
