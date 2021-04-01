@@ -3,7 +3,7 @@
 from flask import Flask, render_template, request, session, redirect
 
 from lib.forms import LoginForm, ContactUs, NewPost
-from lib.database import username, password
+from lib.database import users
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '1234'
@@ -58,14 +58,19 @@ def panel():
 def submit():
     login_form = LoginForm(request.form)
     if login_form.validate_on_submit():
+        form_id = login_form.id.data
         form_username = login_form.username.data
         form_password = login_form.password.data
-        if form_username == username and form_password == password:
-            session['status'] = True
-            session['username'] = form_username
-            return redirect("https://neotrinost.ir/panel")
+
+        if form_id in users:
+            if form_username == users[form_id][0] and form_password == users[form_id][1]:
+                session['status'] = True
+                session['username'] = form_username
+                return redirect("https://neotrinost.ir/panel")
+            else:
+                return render_template("Error/error.html", context = ['User Error', 'Sorry, Username or Password is incorrect'])
         else:
-            return render_template("Error/error.html", context = ['User Error', 'Sorry, Username or Password is incorrect'])
+            return render_template("Error/error.html", context = ['User Error', 'Sorry, This user is not found'])
 
 # Logout Back-End
 @app.route("/logout")
