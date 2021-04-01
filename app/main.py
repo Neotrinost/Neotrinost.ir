@@ -23,6 +23,11 @@ def blog():
 def about():
     return render_template("about.html")
 
+# Who
+@app.route("/who")
+def who():
+    return render_template("who.html")
+
 # Contact
 @app.route("/contact")
 def contact():
