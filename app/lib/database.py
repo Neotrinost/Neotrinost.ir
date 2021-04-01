@@ -21,5 +21,9 @@
 #     username = usrname
 #     password = passwd
 
-username = "admin"
-password = "admin"
+users = {
+    "amir" : ["amirusername", "amirpassword"],
+    "annahita" : ["annausername", "annapassword"],
+    "shahriar" : ["shahriarusername", "shahriarpassword"],
+    "amirhossein" : ["amirhosseinusername", "amirhosseinpassword"]
+}
