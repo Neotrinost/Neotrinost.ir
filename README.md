@@ -1,30 +1,7 @@
 # Neotrinost.ir
 
-- programmer : Amirhossein Mohammadi
+- Programmers : Neotrinost Team
 
 ---
 
-**Create User**
-
-```mysql
-CREATE USER 'neotrinost'@'localhost' IDENTIFIED BY 'neotrinost';
-GRANT ALL PRIVILEGES ON *.* TO 'neotrinost'@'localhost';
-FLUSH PRIVILEGES;
-```
-
-**Create Database and Table**
-
-```mysql
-CREATE DATABASE neotrinost;
-USE neotrinost;
-CREATE TABLE admin (usrname TEXT, passwd TEXT);
-INSERT INTO admin VALUES ('usernamesample', 'passwordsample');
-```
-
-**Fandogh Commands**
-
-```
-fandogh login
-fandogh imaga publish
-fandogh service deploy
-```
+Neotrinost Inc. &copy; 2020 - 2021, All Rights Reserved
