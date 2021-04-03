@@ -55,7 +55,7 @@ def contact():
 @app.route("/login")
 def login():
     if 'status' in session:
-        return redirect("https://neotrinost.ir")
+        return redirect("/")
     else:
         login_form = LoginForm()
         return render_template('login.html', login_form = login_form)
@@ -67,7 +67,7 @@ def panel():
         newpost_form = NewPost()
         return render_template("panel.html", new_form = newpost_form)
     else:
-        return redirect("https://neotrinost.ir")
+        return redirect("/")
 
 
 # Actions #
@@ -85,7 +85,7 @@ def submit():
             if form_username == users[form_id][0] and form_password == users[form_id][1]:
                 session['status'] = True
                 session['username'] = form_username
-                return redirect("https://neotrinost.ir/panel")
+                return redirect("/panel")
             else:
                 return render_template("Error/error.html", context = ['User Error', 'Sorry, Username or Password is incorrect'])
         else:
@@ -95,7 +95,7 @@ def submit():
 @app.route("/logout")
 def logout():
    session.pop('status', None)
-   return redirect("https://neotrinost.ir")
+   return redirect("/")
 
 # Subscribe Back-End
 @app.route("/subscribe/", methods = ['POST'])
