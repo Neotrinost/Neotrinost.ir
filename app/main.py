@@ -11,15 +11,9 @@ from lib.forms import LoginForm, ContactUs, NewPost
 
 # Database
 from lib.database import users
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 
 # Starting The App #
 app = Flask(__name__)
-
-#create db and migrate
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
 
 app.config['SECRET_KEY'] = '1234'
 
@@ -113,12 +107,6 @@ def newpost():
     if new_form.validate_on_submit():
         form_title = new_form.title.data
         form_text = new_form.text.data
-
-
-#import and register blueprint
-from mod_users import users
-
-app.register_blueprint(users)
 
 
 # Errors #
