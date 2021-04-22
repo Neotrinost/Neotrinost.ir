@@ -1,16 +1,5 @@
-# For developement server on : $env:FLASK_ENV = "development"
-
 # Importing Flask Things
-from flask import Flask, render_template, request, session, redirect
-
-
-# Use our data #
-
-# Forms
-from lib.forms import LoginForm, ContactUs, NewPost
-
-# Database
-from lib.database import users
+from flask import Flask, render_template
 
 # Starting The App #
 app = Flask(__name__)
@@ -23,91 +12,6 @@ app.config['SECRET_KEY'] = '1234'
 @app.route("/")
 def index():
     return render_template("home.html")
-
-# Blog
-@app.route("/blog")
-def blog():
-    return render_template("blog.html")
-
-# About
-@app.route("/about")
-def about():
-    return render_template("about.html")
-
-# Who
-@app.route("/who")
-def who():
-    return render_template("who.html")
-
-# Contact
-@app.route("/contact")
-def contact():
-    contact_form = ContactUs()
-    return render_template("contact.html", con = contact_form)
-
-# Login
-@app.route("/login")
-def login():
-    if 'status' in session:
-        return redirect("/")
-    else:
-        login_form = LoginForm()
-        return render_template('login.html', login_form = login_form)
-
-# Panel
-@app.route("/panel")
-def panel():
-    if 'status' in session:
-        newpost_form = NewPost()
-        return render_template("panel.html", new_form = newpost_form)
-    else:
-        return redirect("/")
-
-
-# Actions #
-
-# Login Back-End
-@app.route("/submit/", methods = ['POST'])
-def submit():
-    login_form = LoginForm(request.form)
-    if login_form.validate_on_submit():
-        form_id = login_form.id.data
-        form_username = login_form.username.data
-        form_password = login_form.password.data
-
-        if form_id in users:
-            if form_username == users[form_id][0] and form_password == users[form_id][1]:
-                session['status'] = True
-                session['username'] = form_username
-                return redirect("/panel")
-            else:
-                return render_template("Error/error.html", context = ['User Error', 'Sorry, Username or Password is incorrect'])
-        else:
-            return render_template("Error/error.html", context = ['User Error', 'Sorry, This user is not found'])
-
-# Logout Back-End
-@app.route("/logout")
-def logout():
-   session.pop('status', None)
-   return redirect("/")
-
-# Subscribe Back-End
-@app.route("/subscribe/", methods = ['POST'])
-def subscribe():
-    contact_form = ContactUs(request.form)
-    if contact_form.validate_on_submit():
-        form_username = contact_form.email.data
-
-        return form_username
-
-# New Post Back-End
-@app.route("/newpost/", methods = ['POST'])
-def newpost():
-    new_form = NewPost(request.form)
-    if new_form.validate_on_submit():
-        form_title = new_form.title.data
-        form_text = new_form.text.data
-
 
 # Errors #
 
