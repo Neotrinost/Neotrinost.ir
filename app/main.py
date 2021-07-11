@@ -1,5 +1,7 @@
 # Importing Flask Things
-from flask import Flask, render_template
+from flask import Flask, render_template, request, session, redirect
+
+from lib.forms import LoginForm, ContactUs, NewPost
 
 # Starting The App #
 app = Flask(__name__)
@@ -12,6 +14,29 @@ app.config['SECRET_KEY'] = '1234'
 @app.route("/")
 def index():
     return render_template("home.html")
+
+# Login
+@app.route("/login")
+def login():
+    if 'status' in session:
+        return redirect("/")
+    else:
+        login_form = LoginForm()
+        return render_template('login.html', login_form = login_form)
+
+# Login Back-End
+@app.route("/submit/", methods = ['POST'])
+def submit():
+    login_form = LoginForm(request.form)
+    if login_form.validate_on_submit():
+        form_username = login_form.username.data
+        form_password = login_form.password.data
+        if form_username == username and form_password == password:
+            session['status'] = True
+            session['username'] = form_username
+            return redirect("https://neotrinost.ir/panel")
+        else:
+            return render_template("Error/error.html", context = ['User Error', 'Sorry, Username or Password is incorrect'])
 
 # Errors #
 
