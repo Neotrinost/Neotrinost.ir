@@ -1,7 +1,7 @@
 # Importing Flask Things
 from flask import Flask, render_template, request, session, redirect
 
-from lib.forms import LoginForm, ContactUs, NewPost
+from lib.forms import LoginForm, NewPost
 
 # Starting The App #
 app = Flask(__name__)
@@ -19,7 +19,7 @@ def index():
 @app.route("/login")
 def login():
     if 'status' in session:
-        return redirect("/")
+        return redirect("/panel")
     else:
         login_form = LoginForm()
         return render_template('login.html', login_form = login_form)
@@ -34,7 +34,7 @@ def panel():
         return redirect("/")
 
 # New Post Back-End
-@app.route("/newpost/", methods = ['POST'])
+@app.route("/newpost", methods = ['POST'])
 def newpost():
     new_form = NewPost(request.form)
     if new_form.validate_on_submit():
@@ -42,8 +42,8 @@ def newpost():
         form_text = new_form.text.data
 
 # Login Back-End
-@app.route("/submit/", methods = ['POST'])
-def submit():
+@app.route("/logging/", methods = ['POST'])
+def logging():
     login_form = LoginForm(request.form)
     if login_form.validate_on_submit():
         form_username = login_form.username.data
