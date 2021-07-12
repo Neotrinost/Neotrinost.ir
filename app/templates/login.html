@@ -18,7 +18,7 @@
         <hr class="border-warning">
         <br>
         <div class="col-md-5">
-            <form action="{{ url_for('submit') }}" method="POST">
+            <form action="{{ url_for('logging') }}" method="POST">
                 {{ login_form.hidden_tag() }}
                 <div class="form-group">
                     <label for="code">Username</label>
@@ -27,12 +27,6 @@
                 <div class="form-group">
                     <label for="password">Password</label>
                     {{ login_form.password(class = "form-control", placeholder = "Username") }}
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" name="remember" type="checkbox" id="remember">
-                    <label class="form-check-label" for="remember">
-                        Remember Me
-                    </label>
                 </div>
                 <br>
                 <button name="login" id="login" class="btn btn-warning text-white" type="submit">Login</button>
