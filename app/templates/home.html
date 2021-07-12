@@ -18,199 +18,102 @@
 		<link rel="shortcut icon" type="image/jpg" href="static/img/favicon.png"/>
 		<meta property="og:image" content="static/img/favicon.png">
 		<meta property="og:description" content="Neotrinost | Development Company For All Platform">
-		<link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="static/css/bootstrap.css">
 		<script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
 		<style>
-			body {
-				padding-top: 56px;
+    		@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    		body {
+				padding-top: 6%;
+				font-family: 'Pacifico', cursive;
+				color: black;
+				background: lightgray;
+			}
+			.link {
+			    text-decoration: none;
+			    color: purple;
 			}
 		</style>
 	</head>
 	<body>
-		<nav class="navbar bg-warning navbar-expand-lg navbar-dark fixed-top">
-			<div class="container">
-				<a class="navbar-brand" href="/"><span>Neotrinost</span></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand " href=".">Neotrinost</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item text-white active">
-							<a class="nav-link" href="/"><i class="fa fa-home"></i> Home</a>
-						</li>
-						<li class="nav-item text-white active">
-							<a class="nav-link" href="/about"><i class="fa fa-users"></i> About Us</a>
-						</li>
-                        <li class="nav-item text-white active">
-							<a class="nav-link" href="/who"><i class="fa fa-id-card"></i> Profiles</a>
-						</li>
-						<li class="nav-item text-white active">
-							<a class="nav-link" href="/contact"><i class="fa fa-envelope"></i> Contact Us</a>
-						</li>
-                        <li class="nav-item text-white active">
-							<a class="nav-link" href="/blog"><i class="fa fa-blog"></i> Blog</a>
-						</li>
-					</ul>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="fa fa-info"></i> About us
+                        </a>
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="fa fa-phone"></i> Contact us
+                        </a>
+                    </div>
 				</div>
 			</div>
 		</nav>
+        <br>
 		<div class="container-fluid text-center">
-            <br>
             <h1>Neotrinost</h1>
             <h4>A place to develop what you want</h4>
-            <hr class="border-warning" style="width: 30%;">
+            <br>
+            <br>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4" style="color: green;">
                     <i class="fa fa-android"></i>
                     <h4>Android</h4>
                     <p>Android Projects, Java or Kotlin</p>
+                    <br>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4" style="color: #000080;">
                     <i class="fa fa-globe"></i>
                     <h4>Websites</h4>
                     <p>Php or Flask or Django, Leave it to us</p>
+                    <br>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4" style="color: blue;">
                     <i class="fa fa-desktop"></i>
                     <h4>Desktop</h4>
                     <p>CLI or GUI, Java or Python</p>
+                    <br>
                 </div>
             </div>
             <br><br>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4" style="color: red;">
                     <i class="fa fa-heart"></i>
                     <h4>Love</h4>
                     <p>We love to code</p>
+                    <br>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4" style="color: fuchsia;">
                     <i class="fa fa-brain"></i>
                     <h4>Focus</h4>
                     <p>We focus on what we write</p>
+                    <br>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4" style="color: #d4af37;">
                     <i class="fa fa-trophy"></i>
                     <h4>The Best</h4>
                     <p>We do the bests</p>
+                    <br>
                 </div>
             </div>
-		</div>
-		<br>
-		<hr class="border-warning" style="width: 90%;">
-		<br>
-		<div class="container-fluid text-center">
-            <br>
-            <h1>Top Employees</h1>
-            <h3>In Neotrinost</h3>
-            <br>
-            <p>Click on the person to see profile</p>
-            <br>
-            <br>
+            <br><br>
             <div class="row">
-                <div class="col-sm-3">
-                    <div data-toggle="modal" data-target="#amirohammadi" class="shadow rounded p-3 border border-warning">
-                        <br>
-                        <i class="fa fa-laptop"></i>
-                        <h4>CEO</h4>
-                        <hr style="width: 90%;" class="border-warning">
-                        <p><b>Amirhossein Mohammadi</b></p>
-                        <p>Chief Exclusive Officer</p>
-                    </div>
-                    <br>
+                <div class="col-md-6" style="color: skyblue;">
+                    <h4>About us</h4>
                 </div>
-                <div class="col-sm-3">
-                    <div data-toggle="modal" data-target="#annahita" class="shadow rounded p-3 border border-warning">
-                        <br>
-                        <i class="fa fa-server"></i>
-                        <h4>CTO</h4>
-                        <hr style="width: 90%;" class="border-warning">
-                        <p><b>Annahita Mirhosseini</b></p>
-                        <p>Chief Technology Officer</p>
-                    </div>
-                    <br>
-                </div>
-                <br>
-                <div class="col-sm-3">
-                    <div data-toggle="modal" data-target="#shahriar" class="shadow rounded p-3 border border-warning">
-                        <br>
-                        <i class="fa fa-globe"></i>
-                        <h4>CWO</h4>
-                        <hr style="width: 90%;" class="border-warning">
-                        <p><b>Shahriar Ghasempour</b></p>
-                        <p>Chief Web Officer</p>
-                    </div>
-                    <br>
-                </div>
-                <div class="col-sm-3">
-                    <div data-toggle="modal" data-target="#amirdorudi" class="shadow rounded p-3 border border-warning">
-                        <br>
-                        <i class="fa fa-paint-brush"></i>
-                        <h4>CDO</h4>
-                        <hr style="width: 90%;" class="border-warning">
-                        <p><b>Amirhossein Darroudi</b></p>
-                        <p>Chief Designer Officer</p>
-                    </div>
-                    <br>
+                <div class="col-md-6" style="color: skyblue;">
+                    <h4>Contact us</h4>
                 </div>
             </div>
 		</div>
 		<br>
-		<hr class="border-warning" style="width: 90%;">
-		<br>
-		<div class="container-fluid text-center">
-            <br>
-            <h1>Contact us</h1>
-			<br>
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-8">
-					<div class="border border-warning card mb-4">
-						<div class="card-body">
-							<h2 class="card-title">Contact us right now !</h2>
-							<hr class="border-warning">
-							<p class="card-text">
-								<b><i class="fa fa-envelope"></i> Email :</b>
-								<span>neotrinost@yahoo.com</span>
-								<br>
-								<br>
-								<b><i class="fa fa-phone"></i> Phone :</b>
-								<span>+98 901 4784 362</span>
-								<br>
-								<br>
-								<b><i class="fa fa-telegram"></i> Telegram :</b>
-								<span>@NeotrinostSupport</span>
-							</p>
-						</div>
-						<div class="card-footer border-warning text-muted">
-							For more information, Send us an empty mail
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2"></div>
-			</div>
-        </div>
-		<footer class="py-5 bg-warning">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="m-0 text-left text-white">
-							<h2 class="text-white"><b><a class="text-white" href="https://www.linkedin.com/company/neotrinost">Neotrinost</a></b></h2>
-							<h5>
-								<i class="fa fa-linkedin text-white"></i>
-								<i class="fa fa-github text-white"></i>
-								<i class="fa fa-telegram text-white"></i>
-								<i class="fa fa-instagram text-white"></i>
-                            </h5>
-                            <br>
-                            <small>Neotrinost Inc <i class="fa fa-copyright"></i> 2020 - 2021, All Rights Reserved</small>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="static/js/bootstrap.js"></script>
 	</body>
 </html>
