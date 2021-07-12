@@ -1,8 +1,6 @@
 # Importing Flask Things
 from flask import Flask, render_template, request, session, redirect
 
-from lib.forms import LoginForm, NewPost
-
 # Starting The App #
 app = Flask(__name__)
 
@@ -14,52 +12,6 @@ app.config['SECRET_KEY'] = '1234'
 @app.route("/")
 def index():
     return render_template("home.html")
-
-# Login
-@app.route("/login")
-def login():
-    if 'status' in session:
-        return redirect("/panel")
-    else:
-        login_form = LoginForm()
-        return render_template('login.html', login_form = login_form)
-
-# Panel
-@app.route("/panel")
-def panel():
-    if 'status' in session:
-        newpost_form = NewPost()
-        return render_template("panel.html", new_form = newpost_form)
-    else:
-        return redirect("/")
-
-# New Post Back-End
-@app.route("/newpost", methods = ['POST'])
-def newpost():
-    new_form = NewPost(request.form)
-    if new_form.validate_on_submit():
-        form_title = new_form.title.data
-        form_text = new_form.text.data
-
-# Login Back-End
-@app.route("/logging/", methods = ['POST'])
-def logging():
-    login_form = LoginForm(request.form)
-    if login_form.validate_on_submit():
-        form_username = login_form.username.data
-        form_password = login_form.password.data
-        if form_username == "amir" and form_password == "1234":
-            session['status'] = True
-            session['username'] = form_username
-            return redirect("/panel")
-        else:
-            return render_template("Error/error.html", context = ['User Error', 'Sorry, Username or Password is incorrect'])
-
-# Logout Back-End
-@app.route("/logout")
-def logout():
-   session.pop('status', None)
-   return redirect("/")
 
 # Errors #
 
