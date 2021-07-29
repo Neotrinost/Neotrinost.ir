@@ -3,23 +3,24 @@
 .light {
     padding: 6%;
     font-family: 'Pacifico', cursive;
-    color: #bb86f3;
-    background: black;
+    color: black;
+    background: white;
     text-align: center;
 }
 .light .dialog {
     text-align: left;
     padding: 3%;
-    background: #121212;
-    border: solid 1px #121212;
+    background: #f6f6f6;
+    border: solid 1px #f6f6f6;
 }
 .light .link {
     text-decoration: none;
-    color: purple;
+    color: gray;
 }
 .light .name {
-    color: #bb86f3;
+    color: black;
 }
 .light .naav, .navbar-brand, .nav-link {
     text-decoration: none;
+    background: #f6f6f6;
 }
