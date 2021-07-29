@@ -19,6 +19,7 @@
 }
 .light .name {
     color: black;
+    background: #f6f6f6;
 }
 .light .naav, .navbar-brand, .nav-link {
     text-decoration: none;
