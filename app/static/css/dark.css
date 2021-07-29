@@ -25,3 +25,8 @@
     text-decoration: none;
     background: #121212;
 }
+.dark .toggle {
+    border: solid 1px #121212;
+    background: #121212;
+    color: yellow;
+}
