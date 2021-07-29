@@ -30,3 +30,9 @@
     background: #121212;
     color: yellow;
 }
+.dark .center {
+    text-align: center;
+}
+.dark .left {
+    text-align: left;
+}
