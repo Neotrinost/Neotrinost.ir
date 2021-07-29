@@ -1,0 +1,19 @@
+.light {
+    padding-top: 6%;
+    font-family: 'Pacifico', cursive;
+    color: #FFA500;
+    background: #f2f2f2;
+    text-align: center;
+}
+.light .link-c {
+    text-decoration: none;
+    color: #3c1321;
+}
+.light .link-s {
+    text-decoration: none;
+    color: #0e89f6;
+}
+.light .naav, .navbar-brand, .nav-link {
+    text-decoration: none;
+    color: black;
+}
