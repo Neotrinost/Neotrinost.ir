@@ -19,7 +19,9 @@
 }
 .dark .name {
     color: #bb86f3;
+    background: #121212;
 }
 .dark .naav, .navbar-brand, .nav-link {
     text-decoration: none;
+    background: #121212;
 }
