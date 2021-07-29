@@ -25,10 +25,11 @@
         <link href="static/css/dark.css" type="text/css" rel="stylesheet">
         <link href="static/css/light.css" type="text/css" rel="stylesheet">
 	</head>
-	<body class="light" id="all">
+	<body class="dark" id="all">
 		<nav class="navbar navbar-expand-lg naav fixed-top">
 			<div class="container-fluid">
 				<a class="navbar-brand name" href=".">Neotrinost</a>
+                <button onclick="toggle()" value="dark" class="toggle" id="mode">Toggle to <i class="fa fa-sun"></i> mode</button>
 			</div>
 		</nav>
         <br>
@@ -39,19 +40,19 @@
             <br>
             <br>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 dialog">
                     <i class="fa fa-android"></i>
                     <h4>Android</h4>
                     <p>Android Projects, Java or Kotlin</p>
                     <br>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 dialog">
                     <i class="fa fa-globe"></i>
                     <h4>Websites</h4>
                     <p>Php or Flask or Django, Leave it to us</p>
                     <br>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 dialog">
                     <i class="fa fa-desktop"></i>
                     <h4>Desktop</h4>
                     <p>CLI or GUI, Java or Python</p>
@@ -60,19 +61,19 @@
             </div>
             <br>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 dialog">
                     <i class="fa fa-heart"></i>
                     <h4>Love</h4>
                     <p>We love to code</p>
                     <br>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 dialog">
                     <i class="fa fa-brain"></i>
                     <h4>Focus</h4>
                     <p>We focus on what we write</p>
                     <br>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 dialog">
                     <i class="fa fa-trophy"></i>
                     <h4>The Best</h4>
                     <p>We do the bests</p>
@@ -123,5 +124,6 @@
 		</div>
 		<br>
 		<script src="static/js/bootstrap.js"></script>
+		<script src="static/js/main.js"></script>
 	</body>
 </html>
