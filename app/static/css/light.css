@@ -30,8 +30,8 @@
     background: #f6f6f6;
     color: black;
 }
-.dark .heading {
-    color: fuchsia;
+.light .heading {
+    color: black;
 }
 .light .center {
     text-align: center;
