@@ -8,14 +8,13 @@
     text-align: center;
 }
 .dark .dialog {
-    text-align: left;
     padding: 3%;
     background: #121212;
     border: solid 1px #121212;
 }
 .dark .link {
     text-decoration: none;
-    color: purple;
+    color: #03dac5;
 }
 .dark .name {
     color: #bb86f3;
@@ -29,6 +28,9 @@
     border: solid 1px #121212;
     background: #121212;
     color: yellow;
+}
+.dark .heading {
+    color: fuchsia;
 }
 .dark .center {
     text-align: center;
