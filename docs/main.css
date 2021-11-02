@@ -1,0 +1,73 @@
+@font-face {
+    font-family: iransans;
+    src: url("iransans.ttf");
+}
+
+.nlink {
+    text-decoration: none;
+    color: purple;
+}
+
+.center {
+    text-align: center;
+}
+
+.body {
+    background-color: #ddd;
+    font-family: iransans;
+    direction: rtl;
+    text-align: right;
+}
+
+.main {
+    padding: 2%;
+    color: black;
+}
+.dialog {
+    background-color: #f1f1f1;
+    padding: 3%;
+}
+
+.gotoit {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.product-title {
+    font-size: 18px;
+    /* font-weight: bold; */
+}
+
+.product-text {
+    font-size: 12px;
+}
+
+.product-link {
+    font-size: 13px;
+}
+
+.index {
+    background: linear-gradient(-45deg, purple, rgb(85, 21, 94));
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    height: 100vh;
+    padding: 5%;
+    /* border-bottom: solid 1px black; */
+    color: white;
+}
+
+.text {
+    padding: 5%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
