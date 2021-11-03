@@ -24,6 +24,7 @@
     color: black;
 }
 .dialog {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #f1f1f1;
     padding: 3%;
 }
@@ -47,7 +48,7 @@
 }
 
 .index {
-    background: linear-gradient(-45deg, purple, rgb(85, 21, 94));
+    background: linear-gradient(-45deg, rgb(0, 65, 185), rgb(8, 7, 92));
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
     height: 100vh;
@@ -70,4 +71,22 @@
     100% {
         background-position: 0% 50%;
     }
+}
+
+.service-title {
+    font-size: 18px;
+    /* font-weight: bold; */
+}
+
+.service-text {
+    font-size: 12px;
+}
+.service-link {
+    font-size: 13px;
+}
+
+.foot {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black;
 }
