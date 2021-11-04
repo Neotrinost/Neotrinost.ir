@@ -86,13 +86,13 @@
 }
 
 .foot {
-    border-top-left-radius: 20%;
-    border-top-right-radius: 20%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
     background-color: #ccc;
-    padding: 3%;
+    padding: 2%;
 }
 .foot .footitle {
-    padding: 3%;
+    padding: 2%;
 }
 
 .corn {
