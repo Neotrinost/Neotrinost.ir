@@ -3,11 +3,11 @@ import os
 
 
 env = Environment(
-    loader=PackageLoader("generator", "template")
+    loader=PackageLoader("gen", "template")
 )
 
 
-build_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), "build")
+build_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), "gen/build")
 if not os.path.exists(build_dir):
     os.mkdir(build_dir)
 index_path = os.path.join(build_dir, "index.html")
