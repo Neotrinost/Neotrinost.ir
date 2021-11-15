@@ -1,0 +1,154 @@
+@font-face {
+    font-family: iransans;
+    src: url("iransans.ttf");
+}
+
+.nlink {
+    text-decoration: none;
+    color: purple;
+}
+
+.center {
+    text-align: center;
+}
+
+.body {
+    background-color: #ddd;
+    font-family: iransans;
+    direction: rtl;
+    text-align: right;
+}
+
+.main {
+    padding: 2%;
+    color: black;
+}
+.dialog {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #f1f1f1;
+    padding: 3%;
+}
+
+.gotoit {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.product-title {
+    font-size: 18px;
+    /* font-weight: bold; */
+}
+
+.product-text {
+    font-size: 12px;
+}
+
+.product-link {
+    font-size: 13px;
+}
+
+.index {
+    background: linear-gradient(-45deg, rgb(0, 65, 185), rgb(8, 7, 92));
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    height: 100vh;
+    padding: 5%;
+    /* border-bottom: solid 1px black; */
+    color: white;
+}
+
+.text {
+    padding: 5%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.service-title {
+    font-size: 18px;
+    /* font-weight: bold; */
+}
+
+.service-text {
+    font-size: 12px;
+}
+.service-link {
+    font-size: 13px;
+}
+
+.foot {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: #ccc;
+    padding: 2%;
+}
+.foot .footitle {
+    padding: 2%;
+}
+
+.corn {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.github-corner:hover .octo-arm {
+    animation:octocat-wave 560ms ease-in-out
+}
+@keyframes octocat-wave {
+    0%,100% {
+        transform:rotate(0)
+    }
+    20%,60% {
+        transform:rotate(-25deg)
+    }
+    40%,80%{
+        transform:rotate(10deg)}
+}
+@media (max-width:500px){
+    .github-corner:hover .octo-arm {
+        animation:none
+    }
+    .github-corner .octo-arm {
+        animation:octocat-wave 560ms ease-in-out
+    }
+}
+
+.person {
+    text-align: center;
+    border-radius: 5%;
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #ddd;
+    height: 100%;
+}
+.person img {
+    text-align: center;
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.person .name {
+    font-weight: bold;
+}
+.person .pos {
+    font-size: 12px;
+}
+.person .icon a {
+    text-decoration: none;
+    color: black;
+}
+
+.need {
+    padding-top: 50%;
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta name="author" content="Neotrinost">
+    <meta name="description" content="Neotrinost | Open-Sourve development team">
+    <meta name="keywords"
+          content="neotrinost,open source,python,php,java,android,linux,manjaro,amirhossein mohammadi,linkedin,twitter,gnu_amir,annahita mirhosseini">
+    <meta property="og:title" content="Neotrinost | Open-Sourve development team">
+    <meta property="og:type" content="programming">
+    <meta property="og:description" content="Neotrinost | Development Company For All Platform">
+    <meta name="google-site-verification" content="6-dOUFYMK1TwQ2tDtGmvBW79px0fC8f5vUb_oDVC2Sw">
+
+    <link rel="stylesheet" href="/css/mdb/mdb.rtl.min.css">
+    <link rel="stylesheet" href="/css/fontawesome/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    {% block styles %}
+    {% endblock %}
+
+</head>
+<body>
+
+
+{% block body %}
+    {% block contents %}
+
+    {% endblock %}
+{% endblock %}
+
+
+<script src="/js/mdb/mdb.min.js"></script>
+<script src="/js/fontawesome/all.min.js"></script>
+
+{% block scripts %}
+
+{% endblock %}
+</body>
+</html>
