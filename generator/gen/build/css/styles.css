@@ -17,3 +17,7 @@
         background-position: 0 50%;
     }
 }
+
+.corner-radius-8px {
+    border-radius: 8px;
+}

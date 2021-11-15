@@ -1,7 +1,16 @@
 {% extends "site/base/site_with_footer_header.html" %}
 
+{% from "site/macros/slider_macro.html" import generate_slider %}
+
 {% block title %}Neotrinost - Index{% endblock %}
 
 {% block contents %}
 <p>This is p tag</p>
+    {{ generate_slider() }}
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        new Splide('.splide').mount();
+    </script>
 {% endblock %}

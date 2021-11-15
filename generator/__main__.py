@@ -17,3 +17,7 @@ site_html = env.get_template("site/pages/index.html").render()
 
 with open(index_path, mode="w") as html_file:
     html_file.write(site_html)
+
+
+print("index.html file generated successfully!\n" +
+      "You can find it at gen/build/index.html")

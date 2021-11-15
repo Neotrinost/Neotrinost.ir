@@ -1,0 +1,11 @@
+{% macro generate_card(card_title, card_text, card_link_text, card_link_url) %}
+    <div class="card h-100 corner-radius-8px">
+        <div class="card-body">
+            <h3>{{ card_title }}</h3>
+            <p>{{ card_text }}</p>
+        </div>
+        <div class="card-footer">
+            <a href="{{ card_link_url }}">{{ card_link_text }}</a>
+        </div>
+    </div>
+{% endmacro %}

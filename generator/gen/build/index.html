@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="css/mdb/mdb.rtl.min.css">
     <link rel="stylesheet" href="css/fontawesome/all.min.css">
+    <link rel="stylesheet" href="css/splidejs/splide.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styles.css">
 
@@ -45,6 +46,27 @@
 </header>
     
 <p>This is p tag</p>
+    
+
+
+    <div dir="ltr" class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">Slide 01</li>
+                <li class="splide__slide">Slide 02</li>
+                <li class="splide__slide">Slide 03</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        new Splide('.splide').mount();
+    </script>
+
+    
+    
+
+
 
     <div class="row foot">
     <div class="col-md-12 footitle">
@@ -182,11 +204,14 @@
 
 
 
-<script src="/js/mdb/mdb.min.js"></script>
-<script src="/js/fontawesome/all.min.js"></script>
+<script src="js/mdb/mdb.min.js"></script>
+<script src="js/fontawesome/all.min.js"></script>
+<script src="js/splidejs/splide.min.js"></script>
 
 
-
+    <script>
+        new Splide('.splide').mount();
+    </script>
 
 </body>
 </html>
