@@ -1,6 +1,7 @@
 __pycache__/
 app/__pycache__/
-venv
+venv/
+env/
 app/.env
 .fandogh
 .idea/
