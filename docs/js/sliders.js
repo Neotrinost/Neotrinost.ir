@@ -4,6 +4,8 @@ for (let i = 0; i < sliderElements.length; i++) {
 
     new Splide(sliderElements[i], {
         perPage: 3,
+        autoplay: true,
+        interval: 6000,
         type: "loop",
         breakpoints: {
             720: {
