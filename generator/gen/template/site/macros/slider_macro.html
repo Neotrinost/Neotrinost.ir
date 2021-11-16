@@ -1,7 +1,7 @@
 {% macro generate_slider(slider_class, cards) %}
 
 
-    <div dir="ltr" class="splide {{ slider_class }} pb-4" data-splide='{"arrows":false,"direction":"rtl", "pagination":true}'>
+    <div dir="ltr" class="splide {{ slider_class }} pb-4" data-splide='{"type":"loop","drag":"free","arrows":false,"direction":"rtl", "pagination":true}'>
         <div class="splide__track">
             <ul class="splide__list">
                 {% for card in cards %}
