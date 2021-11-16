@@ -46,9 +46,14 @@ a {
 
 .img-circle{
     border-radius: 50%;
+    border: solid 1px #000000;
     box-shadow: rgba(0, 0, 0, 0.23) 0 6px;
 }
 
 .cfa-2x {
     font-size: 1.5em;
+}
+
+.bg-medium {
+    background-color: #d9d9d9;
 }
