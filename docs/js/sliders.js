@@ -4,6 +4,7 @@ for (let i = 0; i < sliderElements.length; i++) {
 
     new Splide(sliderElements[i], {
         perPage: 3,
+        type: "loop",
         breakpoints: {
             720: {
                 perPage: 1,
