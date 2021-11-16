@@ -2,7 +2,7 @@
     <div class="card h-100">
         <div class="card-body">
             <h5 class="text-black">{{ card_title }}</h5>
-            <p class="text-black">{{ card_text }}</p>
+            <p class="text-black mt-3">{{ card_text }}</p>
         </div>
         <div class="card-footer">
             <a href="{{ card_link_url }}">{{ card_link_text }}</a>
@@ -11,10 +11,10 @@
 {% endmacro %}
 
 {% macro generate_team_card(card_picture_url, card_title, card_subtitle, icon_url_list) %}
-        <div class="card h-100">
+        <div class="card h-100 bg-medium shadow">
         <div class="card-body">
             <img src="{{ card_picture_url }}" alt="team_avatar" class="img-fluid img-circle d-block mx-auto w-50">
-            <h5 class="mt-3 text-black text-center">{{ card_title }}</h5>
+            <h5 class="mt-5 text-black text-center">{{ card_title }}</h5>
             <h5 class="text-black text-center small">{{ card_subtitle }}</h5>
         </div>
         <div class="card-footer">

@@ -15,6 +15,12 @@
             "<a href='https://t.me/Mehranalam'><i class='fab cfa-2x fa-telegram'></i></a>",
 ]%}
 
+{% set annahita_icon_list = [
+            "<a href='https://github.com/Annahita2004'><i class='fab cfa-2x fa-github text-black'></i></a>",
+            "<a href='https://www.linkedin.com/in/annahita-mirhosseini'><i class='fab cfa-2x fa-linkedin' style='color: #103a87;'></i></a>",
+            "<a href='mailto:miss.annahita@yahoo.com'><i class='fas cfa-2x fa-envelope' style='color: #c23131;'></i></a>",
+]%}
+
 {% set team_cards =
         [
             generate_team_card(
@@ -28,6 +34,12 @@
                 "مهران علم بیگی",
                 "CTO",
                 mehran_icon_list
+            ),
+            generate_team_card(
+                "https://avatars.githubusercontent.com/u/73898300?v=4",
+                "آناهیتا میرحسینی",
+                "Co-Founder",
+                annahita_icon_list
             ),
         ]
         %}
