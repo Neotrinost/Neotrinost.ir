@@ -6,6 +6,8 @@ for (let i = 0; i < sliderElements.length; i++) {
         perPage: 3,
         autoplay: true,
         interval: 6000,
+        pauseOnFocus: false,
+        pauseOnHover: false,
         type: "loop",
         breakpoints: {
             720: {
