@@ -12,7 +12,6 @@ if not os.path.exists(build_dir):
     os.mkdir(build_dir)
 index_path = os.path.join(build_dir, "index.html")
 
-
 site_html = env.get_template("site/pages/index.html").render()
 
 with open(index_path, mode="w") as html_file:

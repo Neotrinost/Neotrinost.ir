@@ -1,3 +1,8 @@
+@font-face {
+    font-family: iransans;
+    src: url("./iransans.ttf");
+}
+
 .site-header {
     background: linear-gradient(-45deg, rgb(0, 65, 185), rgb(8, 7, 92));
     background-size: 400% 400%;
@@ -20,4 +25,26 @@
 
 .corner-radius-8px {
     border-radius: 8px;
+}
+
+p, a, h1, h2 ,h3, h4 , h5, h6 {
+    font-family: iransans, serif;
+}
+p {
+    font-size: 12px;
+}
+a {
+    font-size: 13px;
+}
+.header-text {
+    font-size: 14px;
+}
+
+.splide__pagination__page {
+    background: #6d6d6d;
+}
+
+.img-circle{
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.23) 0 8px;
 }

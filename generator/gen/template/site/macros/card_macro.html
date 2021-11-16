@@ -1,11 +1,28 @@
 {% macro generate_card(card_title, card_text, card_link_text, card_link_url) %}
-    <div class="card h-100 corner-radius-8px">
+    <div class="card h-100">
         <div class="card-body">
-            <h3>{{ card_title }}</h3>
-            <p>{{ card_text }}</p>
+            <h5 class="text-black">{{ card_title }}</h5>
+            <p class="text-black">{{ card_text }}</p>
         </div>
         <div class="card-footer">
             <a href="{{ card_link_url }}">{{ card_link_text }}</a>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro generate_team_card(card_picture_url, card_title, card_subtitle, icon_url_list) %}
+        <div class="card h-100">
+        <div class="card-body">
+            <img src="{{ card_picture_url }}" alt="team_avatar" class="img-fluid img-circle d-block mx-auto w-50">
+            <h4 class="mt-3 text-black text-center">{{ card_title }}</h4>
+            <h5 class="text-black text-center small">{{ card_subtitle }}</h5>
+        </div>
+        <div class="card-footer">
+            <p>
+                {% for icon_url in icon_url_list %}
+                    <span class="p-1">{{ icon_url }}</span>
+                {% endfor %}
+            </p>
         </div>
     </div>
 {% endmacro %}
