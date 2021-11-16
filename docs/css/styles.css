@@ -46,7 +46,7 @@ a {
 
 .img-circle{
     border-radius: 50%;
-    border: solid 1px #000000;
+    border: solid 1px #000000 !important;
     box-shadow: rgba(0, 0, 0, 0.23) 0 6px;
 }
 
@@ -55,5 +55,5 @@ a {
 }
 
 .bg-medium {
-    background-color: #d9d9d9;
+    background-color: #d9d9d9!important;
 }
