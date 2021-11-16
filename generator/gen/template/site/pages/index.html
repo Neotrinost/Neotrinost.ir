@@ -18,35 +18,14 @@
 {% block contents %}
     <div class="px-2 py-5">
         <h4 class="text-black px-2 pb-3">معرفی سرویس ها</h4>
-        {{ generate_slider("slider1", cards) }}
+        {{ generate_slider("default-slider", cards) }}
+        <hr>
     </div>
 
 {% endblock %}
 
 {% block scripts %}
-    <script>
-        new Splide('.slider1', {
-            perPage: 3,
-            breakpoints: {
-                720: {
-                    perPage: 1,
-                },
-                1100: {
-                    perPage: 2,
-                },
-            }
-        }).mount();
+    <script src="js/sliders.js">
 
-        new Splide('.footer-slider', {
-            perPage: 4,
-            breakpoints: {
-                720: {
-                    perPage: 2,
-                },
-                1100: {
-                    perPage: 3,
-                },
-            }
-        }).mount();
     </script>
 {% endblock %}

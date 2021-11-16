@@ -14,11 +14,11 @@
         <div class="card h-100">
         <div class="card-body">
             <img src="{{ card_picture_url }}" alt="team_avatar" class="img-fluid img-circle d-block mx-auto w-50">
-            <h4 class="mt-3 text-black text-center">{{ card_title }}</h4>
+            <h5 class="mt-3 text-black text-center">{{ card_title }}</h5>
             <h5 class="text-black text-center small">{{ card_subtitle }}</h5>
         </div>
         <div class="card-footer">
-            <p>
+            <p class="text-center">
                 {% for icon_url in icon_url_list %}
                     <span class="p-1">{{ icon_url }}</span>
                 {% endfor %}

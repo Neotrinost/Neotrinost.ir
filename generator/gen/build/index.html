@@ -40,7 +40,7 @@
               fill="currentColor" class="octo-body"></path>
     </svg>
 </a>
-    <header class="site-header px-5 vh-100" style="padding-top: 128px;">
+    <header class="site-header px-5 vh-100" style="padding-top: 128px;min-height: 400px;">
 
     <h1 class="mt-5 pb-3">نئوترینوست</h1>
     <p class="header-text"> نئوترینوست یک تیم ارائه نرم افزار و سرویس های مختلف و همچنین کراس پلتفرم میباشد.</p>
@@ -53,7 +53,7 @@
         
 
 
-    <div dir="ltr" class="splide slider1 pb-4" data-splide='{"arrows":false,"direction":"rtl", "pagination":true}'>
+    <div dir="ltr" class="splide default-slider pb-4" data-splide='{"arrows":false,"direction":"rtl", "pagination":true}'>
         <div class="splide__track">
             <ul class="splide__list">
                 
@@ -110,6 +110,7 @@
     </div>
 
 
+        <hr>
     </div>
 
 
@@ -122,9 +123,12 @@
 
 
 
-<footer class="footer px-3 pt-5" style="background-color: #c0c0c0;">
-    <div class="row gx-0">
-        
+
+
+<footer class="footer px-5 pt-5" style="background-color: #c0c0c0;">
+    <h3 class="text-black">تیم ما</h3>
+    <h6 class="text-black mb-4">تیم ما دارای افراد کمی هست اما ولی با توجه به کم بودن، تجربه کافی برای پیشرفت تیم دارا هستیم!</h6>
+    
 
 
     <div dir="ltr" class="splide footer-slider pb-4" data-splide='{"arrows":false,"direction":"rtl", "pagination":true}'>
@@ -135,19 +139,21 @@
         <div class="card h-100">
         <div class="card-body">
             <img src="https://avatars.githubusercontent.com/u/55284339?v=4" alt="team_avatar" class="img-fluid img-circle d-block mx-auto w-50">
-            <h4 class="mt-3 text-black text-center">امیرحسین محمدی</h4>
+            <h5 class="mt-3 text-black text-center">امیرحسین محمدی</h5>
             <h5 class="text-black text-center small">CEO | Founder</h5>
         </div>
         <div class="card-footer">
-            <p>
+            <p class="text-center">
                 
-                    <span class="p-1"><a href='https://github.com/BlackIQ'><i class='fab fa-2x fa-github text-black'></i></a></span>
+                    <span class="p-1"><a href='https://github.com/BlackIQ'><i class='fab cfa-2x fa-github text-black'></i></a></span>
                 
-                    <span class="p-1"><a href='https://www.linkedin.com/in/amirhosseinmohamamdi'><i class='fab fa-2x fa-linkedin'></i></a></span>
+                    <span class="p-1"><a href='https://www.linkedin.com/in/amirhosseinmohamamdi'><i class='fab cfa-2x fa-linkedin' style='color: #103a87;'></i></a></span>
                 
-                    <span class="p-1"><a href='https://github.com/BlackIQ'><i class='fab fa-2x fa-github'></i></a></span>
+                    <span class="p-1"><a href='https://twitter.com/GNU_Amir'><i class='fab cfa-2x fa-twitter'></i></a></span>
                 
-                    <span class="p-1"><a href='mailto:me@blackiq.ir'><i class='fas fa-2x fa-envelope' style='color: #ab9a4b;'></i></a></span>
+                    <span class="p-1"><a href='https://t.me/BlackIQ'><i class='fab cfa-2x fa-telegram'></i></a></span>
+                
+                    <span class="p-1"><a href='mailto:me@blackiq.ir'><i class='fas cfa-2x fa-envelope' style='color: #c23131;'></i></a></span>
                 
             </p>
         </div>
@@ -157,20 +163,16 @@
                     <li class="splide__slide p-2 pb-3">
         <div class="card h-100">
         <div class="card-body">
-            <img src="https://avatars.githubusercontent.com/u/55284339?v=4" alt="team_avatar" class="img-fluid img-circle d-block mx-auto w-50">
-            <h4 class="mt-3 text-black text-center">امیرحسین محمدی</h4>
-            <h5 class="text-black text-center small">CEO | Founder</h5>
+            <img src="https://avatars.githubusercontent.com/u/77109284?v=4" alt="team_avatar" class="img-fluid img-circle d-block mx-auto w-50">
+            <h5 class="mt-3 text-black text-center">مهران علم بیگی</h5>
+            <h5 class="text-black text-center small">CTO</h5>
         </div>
         <div class="card-footer">
-            <p>
+            <p class="text-center">
                 
-                    <span class="p-1"><a href='https://github.com/BlackIQ'><i class='fab fa-2x fa-github text-black'></i></a></span>
+                    <span class="p-1"><a href='https://github.com/Mehranalam'><i class='fab cfa-2x fa-github text-black'></i></a></span>
                 
-                    <span class="p-1"><a href='https://www.linkedin.com/in/amirhosseinmohamamdi'><i class='fab fa-2x fa-linkedin'></i></a></span>
-                
-                    <span class="p-1"><a href='https://github.com/BlackIQ'><i class='fab fa-2x fa-github'></i></a></span>
-                
-                    <span class="p-1"><a href='mailto:me@blackiq.ir'><i class='fas fa-2x fa-envelope' style='color: #ab9a4b;'></i></a></span>
+                    <span class="p-1"><a href='https://t.me/Mehranalam'><i class='fab cfa-2x fa-telegram'></i></a></span>
                 
             </p>
         </div>
@@ -182,7 +184,6 @@
     </div>
 
 
-    </div>
 </footer>
 
 
@@ -192,30 +193,8 @@
 <script src="js/splidejs/splide.min.js"></script>
 
 
-    <script>
-        new Splide('.slider1', {
-            perPage: 3,
-            breakpoints: {
-                720: {
-                    perPage: 1,
-                },
-                1100: {
-                    perPage: 2,
-                },
-            }
-        }).mount();
+    <script src="js/sliders.js">
 
-        new Splide('.footer-slider', {
-            perPage: 4,
-            breakpoints: {
-                720: {
-                    perPage: 2,
-                },
-                1100: {
-                    perPage: 3,
-                },
-            }
-        }).mount();
     </script>
 
 </body>

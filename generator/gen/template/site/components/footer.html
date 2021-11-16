@@ -3,10 +3,16 @@
 {% from "site/macros/card_macro.html" import generate_team_card %}
 
 {% set amir_icon_list = [
-            "<a href='https://github.com/BlackIQ'><i class='fab fa-2x fa-github text-black'></i></a>",
-            "<a href='https://www.linkedin.com/in/amirhosseinmohamamdi'><i class='fab fa-2x fa-linkedin'></i></a>",
-            "<a href='https://github.com/BlackIQ'><i class='fab fa-2x fa-github'></i></a>",
-            "<a href='mailto:me@blackiq.ir'><i class='fas fa-2x fa-envelope' style='color: #ab9a4b;'></i></a>",
+            "<a href='https://github.com/BlackIQ'><i class='fab cfa-2x fa-github text-black'></i></a>",
+            "<a href='https://www.linkedin.com/in/amirhosseinmohamamdi'><i class='fab cfa-2x fa-linkedin' style='color: #103a87;'></i></a>",
+            "<a href='https://twitter.com/GNU_Amir'><i class='fab cfa-2x fa-twitter'></i></a>",
+            "<a href='https://t.me/BlackIQ'><i class='fab cfa-2x fa-telegram'></i></a>",
+            "<a href='mailto:me@blackiq.ir'><i class='fas cfa-2x fa-envelope' style='color: #c23131;'></i></a>",
+]%}
+
+{% set mehran_icon_list = [
+            "<a href='https://github.com/Mehranalam'><i class='fab cfa-2x fa-github text-black'></i></a>",
+            "<a href='https://t.me/Mehranalam'><i class='fab cfa-2x fa-telegram'></i></a>",
 ]%}
 
 {% set team_cards =
@@ -18,17 +24,17 @@
                 amir_icon_list
             ),
             generate_team_card(
-                "https://avatars.githubusercontent.com/u/55284339?v=4",
-                "امیرحسین محمدی",
-                "CEO | Founder",
-                amir_icon_list
+                "https://avatars.githubusercontent.com/u/77109284?v=4",
+                "مهران علم بیگی",
+                "CTO",
+                mehran_icon_list
             ),
         ]
         %}
 
 
-<footer class="footer px-3 pt-5" style="background-color: #c0c0c0;">
-    <div class="row gx-0">
-        {{ generate_slider("footer-slider", team_cards) }}
-    </div>
+<footer class="footer px-5 pt-5" style="background-color: #c0c0c0;">
+    <h3 class="text-black">تیم ما</h3>
+    <h6 class="text-black mb-4">تیم ما دارای افراد کمی هست اما ولی با توجه به کم بودن، تجربه کافی برای پیشرفت تیم دارا هستیم!</h6>
+    {{ generate_slider("footer-slider", team_cards) }}
 </footer>
